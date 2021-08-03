@@ -27,7 +27,7 @@ app.get("/api/hello", function (req, res) {
 });
 
 app.get("/api/whoami", (req, res) => {
-  let payload = {"ipaddress": req.headers['x-forwarded-for'] || req.connection.remoteAddress,,
+  let payload = {"ipaddress": req.headers['x-forwarded-for'] || req.connection.remoteAddress,
                  "language": req.get('accept-language'),
                  "software": req.get('user-agent')}
   res.json(payload);
